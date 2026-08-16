@@ -1,63 +1,76 @@
 # Creativity is Engineering
 
-大家都说 AI 没有创造力。我们不信。
+**这个仓库只回答一个问题：这次创造有没有落成可引用的定律。**
 
-创造力不是吟诗。是你在几百条失败记录里看出「域名被拒」和「页面没出现验证码框」不是同一种失败；是你在另一台机器 `fetch failed` 时想到站点已经为国内网络留了 IP 回退；是你在 `ERR_MODULE_NOT_FOUND` 里意识到 ESM 不会进 asar 找模块，于是把依赖解包到外面。
+聊天里的洞察不算创造。优势被优化掉也不算创造。有稳定门禁 id、有例子、标准自己能 verify，才算落成。
 
-**AI 的创造力 = 人给的真实战场 × 可写的规格 × 可红的测试 × 敢不删慢。**
+标准拆成**纬度（dimension）**：一份文档 = 一句话 + 可勾选门禁 + 禁止清单。门禁有**稳定 id**，可以在 PR 和下一会话里引用。
 
-这个仓库不教 prompt 技巧。它把一次对话里的洞察写成下一个项目还能用的定律。
+| 纬度 | 一句话 | 门禁 id |
+|------|--------|---------|
+| [moat](./dimensions/moat.md) | 不删优势 | `MOAT-1..5` |
+| [measure](./dimensions/measure.md) | 先分段再动 | `MEASURE-1..5` |
+| [taxonomy](./dimensions/taxonomy.md) | 一种失败一种动作 | `TAX-1..5` |
+| [integrate](./dimensions/integrate.md) | 三张皮一层肉 | `INTEG-1..5` |
+| [pack](./dimensions/pack.md) | 包装边界 | `PACK-1..6` |
+| [land](./dimensions/land.md) | 洞察必须落盘 | `LAND-1..5` |
+| [loop](./dimensions/loop.md) | 创造会话七步 | `LOOP-1..5` |
+| [self](./dimensions/self.md) | 标准自检 | `SELF-1..6` |
+
+- 机器可读门禁：[gates.json](./gates.json)
+- 生成的汇总：[STATUS.md](./STATUS.md)
+- 版本与兼容承诺：[CHANGELOG.md](./CHANGELOG.md)
 
 ---
 
-## 四根柱子
+## 边界：本仓 vs 另外两仓
 
-| 柱子 | 一句话 | 入口 |
-|------|--------|------|
-| **创新** | 把约束和「慢」写成产品特性，而不是先优化掉 | [patterns/humanize-as-moat.md](patterns/humanize-as-moat.md) |
-| **颠覆** | AI 的第一产出是分类表和失败样本，不是更快的 `fill()` | [loops/diagnose-spec-probe.md](loops/diagnose-spec-probe.md) |
-| **整合** | 多入口必须收敛到同一层；长跑壳不是 fork | [patterns/one-service-three-surfaces.md](patterns/one-service-three-surfaces.md) |
-| **超越** | 从「开发机能跑」走到可远程装、可停、可回滚的系统 | [loops/launch.md](loops/launch.md) |
+三仓不重叠。同一件事只有一个权威。
 
-宣言全文：[MANIFESTO.md](MANIFESTO.md)
+| 问题 | 权威 |
+|------|------|
+| **能不能上线**：灰度、回滚、STOP、主路径 | [ship-standard](https://github.com/miounet11/ship-standard) |
+| **怎么创建**：七步执行、人与 Agent 分工、最小变绿 | [build-standard](https://github.com/miounet11/build-standard) |
+| **创造有没有落成定律**：不删优势、分段、分类第一产出、包装边界 | **本仓** `dimensions/` |
+
+本仓不写「这版能不能发给用户」。ship-standard 不写「这段慢是不是护城河」。
 
 ---
 
 ## 怎么用
 
-1. 读 [MANIFESTO.md](MANIFESTO.md) 和 [loops/](loops/)
-2. 遇到长跑 / 远程部署 / 打包 / 「感觉慢」时，对照 [case-studies/](case-studies/)
-3. 新项目开工时，复制 [templates/](templates/) 和 [prompts/](prompts/)
-4. 把 [`.cursor/rules/`](.cursor/rules/) 拷进目标仓库，让下一次 AI 会话继承同一套判断
-
-给 AI 的最短指令：打开 [prompts/diagnose-first.md](prompts/diagnose-first.md)。
-
----
-
-## 仓库地图
-
-```
-loops/           闭环：诊断 → 规格 → 红灯 → 上线 → 容错
-patterns/        可复用定律（护城河、失败分类、远程配置、三入口）
-case-studies/    从真实战场抽出的故事，不是教程
-templates/       分类器测试、发布清单、远程配置骨架
-prompts/         给 AI 的系统提示，不是代码生成器
-```
+1. 有人说慢：打开 [measure](./dimensions/measure.md) 和 [moat](./dimensions/moat.md)。
+2. 模型把失败写成 retry：打开 [taxonomy](./dimensions/taxonomy.md)。
+3. 控制面要再写一份脚本：打开 [integrate](./dimensions/integrate.md)。
+4. 另一张网装不上 / 找不到模块：打开 [pack](./dimensions/pack.md)。
+5. 排障结束：打开 [land](./dimensions/land.md)，引用 id，不要引段落标题。
+6. 过不了但必须往前：写豁免（有到期日、有 owner），不要静默绕过。
 
 ---
 
-## 核心公式
+## 自检
 
-```
-创造力 = 真实约束 × 可测量 × 可规格化 × 不删优势
+标准自己先过自己的门禁：
+
+```bash
+npm run verify   # 生成 STATUS + 校验 id 双向一致、死链、重复标题、疑似密钥
 ```
 
-停机只认明确的 STOP。不认「最近全失败」。
-一种失败只做一种事。不要用重提治疗频控。
-密钥不进安装包。配置走 URL，URL 当密码。
+CI 在每个 PR 上跑同一条命令，并在 `STATUS.md` 过期时失败。
 
 ---
 
-## 来源
+## 设计约束
 
-定律抽自一个隐身浏览器 + 桌面控制面 + 长跑农场的真实迭代（Clavue / duokai）。本仓库只保留**可迁移的方法**，不包含密钥、安装包、目标站操作步骤。
+- **可测试。** 门禁用现在时。「系统会更有创造力」不算。
+- **id 稳定。** 公布的 id 永不复用、永不改判定；收紧判定 = 新 id。
+- **一种问题一种动作。** 禁止把不同失败合成一次「重试」。
+- **不删优势。** 操作者点名的护城河默认不动。
+- **密钥不进本仓库。**
+- **纬度正交。** 新纬度补缺口，不复制 ship-standard 的 launch / resilience 段落。
+
+---
+
+## 许可
+
+[MIT](./LICENSE)。标准公开，方便团队复制并继续加纬度。

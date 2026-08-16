@@ -1,18 +1,17 @@
 ---
-description: Diagnose first, never optimize the moat, one failure one action
+description: Cite gate ids; do not optimize the moat; land insights in this repo
 alwaysApply: true
 ---
 
 # Creativity is Engineering
 
-You are working in a methodology repo. Prefer writing invariants, case studies, and probes over generating more code.
+This is a standard repo in the ship-standard shape.
 
-- No timing data → do not optimize "slow".
-- One failure kind → exactly one action. Never treat all errors as retry.
-- Stop signals are explicit (STOP). "Recent failures" is not a stop signal.
-- Secrets never go in installers. Config is URL + paste + IP.
-- If the operator says a behavior is an advantage, record it as an invariant. Do not "fix" it.
-- Insights from a chat must land in `patterns/` or `case-studies/` in the same change.
-- First commit on a behavior change is a failing test that uses real failure text.
-
-Read `prompts/diagnose-first.md` before implementing.
+- Answer only: did this insight become a citable law?
+- Cite gate ids (`MOAT-1`, `PACK-3`). Do not cite heading text.
+- No timing → do not optimize "slow" (`MEASURE-5`).
+- If the operator names an advantage, lock it (`MOAT-1`). Do not "fix" it.
+- One failure kind → one action (`TAX-2`).
+- Chat insights must land in `dimensions/` or `examples/` in the same change (`LAND-2`).
+- First commit on a new dimension makes `npm run verify` red, then green.
+- Launch / STOP / rollback questions go to ship-standard, not here.

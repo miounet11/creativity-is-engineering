@@ -1,0 +1,68 @@
+{
+  "name": "creativity-is-engineering",
+  "version": "0.1.0",
+  "description": "Creativity dimensions with stable gate ids. An insight that only lives in chat is not creativity.",
+  "gates": "gates.json",
+  "related": {
+    "ship-standard": "https://github.com/miounet11/ship-standard",
+    "build-standard": "https://github.com/miounet11/build-standard"
+  },
+  "dimensions": [
+    {
+      "id": "moat",
+      "title": "不删优势",
+      "path": "dimensions/moat.md",
+      "status": "stable",
+      "summary": "If the operator names a behavior as an advantage, lock it. Do not optimize the moat."
+    },
+    {
+      "id": "measure",
+      "title": "先分段再动",
+      "path": "dimensions/measure.md",
+      "status": "stable",
+      "summary": "No timing, no optimization. Parallel stages use max, not sum."
+    },
+    {
+      "id": "taxonomy",
+      "title": "一种失败一种动作",
+      "path": "dimensions/taxonomy.md",
+      "status": "stable",
+      "summary": "The first AI output is a classifier over real text, not a faster fill()."
+    },
+    {
+      "id": "integrate",
+      "title": "三张皮一层肉",
+      "path": "dimensions/integrate.md",
+      "status": "stable",
+      "summary": "HTTP, IPC, and tests converge on one service. A long-run shell is not a fork."
+    },
+    {
+      "id": "pack",
+      "title": "包装边界",
+      "path": "dimensions/pack.md",
+      "status": "stable",
+      "summary": "Secrets stay out of the installer. Config is URL, paste, and a third path. ESM outside asar cannot see modules inside asar."
+    },
+    {
+      "id": "land",
+      "title": "洞察必须落盘",
+      "path": "dimensions/land.md",
+      "status": "stable",
+      "summary": "A chat insight is unfinished until it has a gate id, an example, and a changelog line."
+    },
+    {
+      "id": "loop",
+      "title": "创造会话七步",
+      "path": "dimensions/loop.md",
+      "status": "stable",
+      "summary": "Diagnose, name the law, plan, red probe, minimum green, verify, land."
+    },
+    {
+      "id": "self",
+      "title": "标准自检",
+      "path": "dimensions/self.md",
+      "status": "stable",
+      "summary": "This repo passes its own gates. STATUS is generated. Gate ids are two-way consistent."
+    }
+  ]
+}

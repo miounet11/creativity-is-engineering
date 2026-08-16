@@ -1,31 +1,25 @@
 # Repository Guidelines
 
-This repo is a **methodology**, not an application.
+This repo is a **standard**, not an application. It follows the same machinery as [ship-standard](https://github.com/miounet11/ship-standard).
 
 ## What belongs here
 
-- Invariants, loops, patterns, case studies, prompts, templates
-- Red-probe templates that use **real failure text**
-- Cursor rules that make the next session inherit the same judgment
+- Dimensions with stable gate ids
+- `catalog.json` / `gates.json` / generated `STATUS.md`
+- Examples that map a real session onto ids
+- Checks that fail on missing ids, dead links, and secrets
 
 ## What does not belong here
 
-- Secrets, live `*.env`, installer binaries
-- Step-by-step instructions for operating a third-party signup or bypass
-- Drive-by rewrites of Clavue / duokai source (change those repos there)
+- Secrets, live env files, installer binaries
+- Launch / rollback / STOP checklists (those live in ship-standard)
+- How-to-write-code practices (those live in build-standard)
+- Step-by-step instructions for operating a third-party signup
 
-## How to add a case study
+## How to add a dimension
 
-1. Battlefield (one sentence) + surface symptom + the wrong diagnosis
-2. Evidence (timing, logs, HTTP codes — no secrets)
-3. Judgment (which loop / pattern)
-4. Action taken
-5. Where it was written down so the next chat cannot forget
-
-## How to add a pattern
-
-One page. Title is a law, not a feature name. Include: when it applies, the anti-pattern, and a link to a case study.
+See [CONTRIBUTING.md](./CONTRIBUTING.md). First commit should make `npm run verify` red.
 
 ## Voice
 
-Affirmative, concrete, short. Lead with what is true. Do not open with "It's not X".
+One question per repo. Cite gate ids. Lead with what is true.
