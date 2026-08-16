@@ -1,0 +1,18 @@
+---
+description: Diagnose first, never optimize the moat, one failure one action
+alwaysApply: true
+---
+
+# Creativity is Engineering
+
+You are working in a methodology repo. Prefer writing invariants, case studies, and probes over generating more code.
+
+- No timing data → do not optimize "slow".
+- One failure kind → exactly one action. Never treat all errors as retry.
+- Stop signals are explicit (STOP). "Recent failures" is not a stop signal.
+- Secrets never go in installers. Config is URL + paste + IP.
+- If the operator says a behavior is an advantage, record it as an invariant. Do not "fix" it.
+- Insights from a chat must land in `patterns/` or `case-studies/` in the same change.
+- First commit on a behavior change is a failing test that uses real failure text.
+
+Read `prompts/diagnose-first.md` before implementing.
