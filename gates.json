@@ -1,7 +1,7 @@
 {
-  "$comment": "Gate IDs are the stable contract. Cite ids in PRs and examples. Never reuse an id or change its meaning.",
+  "$comment": "Gate IDs are the stable contract. Never reuse an id or change its meaning. Tightening = new id; old id gets deprecated + supersededBy.",
   "standard": "creativity-is-engineering",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "severities": {
     "block": "Failing this means the insight is not a law yet, or an advantage was deleted.",
     "warn": "Failing this posts a note. Promote to block after two green sessions."
@@ -17,7 +17,9 @@
     { "id": "MOAT-2", "dimension": "moat", "stage": "name", "severity": "block", "text": "该优势有禁止清单：不准把它当 bug 修掉" },
     { "id": "MOAT-3", "dimension": "moat", "stage": "lock", "severity": "block", "text": "若必须削弱优势，只允许 per-call 覆盖，并记风险行" },
     { "id": "MOAT-4", "dimension": "moat", "stage": "see", "severity": "block", "text": "观感痛点与吞吐杠杆已分开写，未混成一句「慢」" },
-    { "id": "MOAT-5", "dimension": "moat", "stage": "reuse", "severity": "warn", "text": "下一会话的规则或提示里能读到这条优势" },
+    { "id": "MOAT-5", "dimension": "moat", "stage": "reuse", "severity": "block", "text": "下一会话的规则或提示里能读到这条优势" },
+    { "id": "MOAT-6", "dimension": "moat", "stage": "lock", "severity": "block", "text": "行为层默认开；不得把关闭 humanize 或把键间隔调成 0 当修 bug" },
+    { "id": "MOAT-7", "dimension": "moat", "stage": "lock", "severity": "block", "text": "键间隔不得用均匀间隔冒充真人节奏" },
 
     { "id": "MEASURE-1", "dimension": "measure", "stage": "see", "severity": "block", "text": "优化「慢」之前已有分段墙钟，或明确只记录观感不动代码" },
     { "id": "MEASURE-2", "dimension": "measure", "stage": "name", "severity": "block", "text": "并行阶段用 max 解释墙钟，不用 sum" },
@@ -25,23 +27,24 @@
     { "id": "MEASURE-4", "dimension": "measure", "stage": "reuse", "severity": "warn", "text": "样本数与成功率 / 吞吐写在例子里，不写密钥" },
     { "id": "MEASURE-5", "dimension": "measure", "stage": "name", "severity": "block", "text": "没有数字的「感觉慢」未进入优化清单" },
 
-    { "id": "TAX-1", "dimension": "taxonomy", "stage": "see", "severity": "block", "text": "分类器吃真实原文，不只测自编枚举" },
-    { "id": "TAX-2", "dimension": "taxonomy", "stage": "name", "severity": "block", "text": "每个 kind 只映射一个 action" },
+    { "id": "TAX-1", "dimension": "taxonomy", "stage": "see", "severity": "block", "deprecated": true, "supersededBy": "RESIL-1", "text": "分类器吃真实原文，不只测自编枚举" },
+    { "id": "TAX-2", "dimension": "taxonomy", "stage": "name", "severity": "block", "deprecated": true, "supersededBy": "LAUNCH-3", "text": "每个 kind 只映射一个 action" },
     { "id": "TAX-3", "dimension": "taxonomy", "stage": "lock", "severity": "block", "text": "第一笔是失败的分类测试，随后才是实现" },
-    { "id": "TAX-4", "dimension": "taxonomy", "stage": "name", "severity": "block", "text": "业务错误与基础设施错误两套分类，stage 是输入" },
-    { "id": "TAX-5", "dimension": "taxonomy", "stage": "reuse", "severity": "block", "text": "日志能区分退役 / 冷却 / 等待 / 换通道 / 降载 / 延后" },
+    { "id": "TAX-4", "dimension": "taxonomy", "stage": "name", "severity": "block", "deprecated": true, "supersededBy": "LAUNCH-3", "text": "业务错误与基础设施错误两套分类，stage 是输入" },
+    { "id": "TAX-5", "dimension": "taxonomy", "stage": "reuse", "severity": "block", "deprecated": true, "supersededBy": "RESIL-8", "text": "日志能区分退役 / 冷却 / 等待 / 换通道 / 降载 / 延后" },
+    { "id": "TAX-6", "dimension": "taxonomy", "stage": "see", "severity": "block", "text": "分类表是本次创造会话的第一份产出，早于实现提交" },
 
     { "id": "INTEG-1", "dimension": "integrate", "stage": "name", "severity": "block", "text": "写操作只进 service；HTTP 与 IPC 只取参" },
     { "id": "INTEG-2", "dimension": "integrate", "stage": "lock", "severity": "block", "text": "测试直调与线上入口走同一 normalize" },
     { "id": "INTEG-3", "dimension": "integrate", "stage": "name", "severity": "block", "text": "长跑壳与桌面共用配置纯函数，不是脚本 fork" },
-    { "id": "INTEG-4", "dimension": "integrate", "stage": "lock", "severity": "warn", "text": "身份 / 网络 / 行为在写入前打成原子 bundle" },
+    { "id": "INTEG-4", "dimension": "integrate", "stage": "lock", "severity": "block", "text": "身份 / 网络 / 行为在写入前打成原子 bundle" },
     { "id": "INTEG-5", "dimension": "integrate", "stage": "reuse", "severity": "block", "text": "三入口职责表存在，无两处同改一份状态文件" },
 
-    { "id": "PACK-1", "dimension": "pack", "stage": "reuse", "severity": "block", "text": "安装包无密钥；配置可 URL / 粘贴 / 第三条路径" },
+    { "id": "PACK-1", "dimension": "pack", "stage": "reuse", "severity": "block", "deprecated": true, "supersededBy": "LAUNCH-5", "text": "安装包无密钥；配置可 URL / 粘贴 / 第三条路径" },
     { "id": "PACK-2", "dimension": "pack", "stage": "see", "severity": "block", "text": "域名失败时的镜像写进 manifest，不只写在聊天里" },
     { "id": "PACK-3", "dimension": "pack", "stage": "lock", "severity": "block", "text": "asar 外跑的 ESM，其运行时依赖也在 asar 外" },
-    { "id": "PACK-4", "dimension": "pack", "stage": "reuse", "severity": "block", "text": "版本号能区分上一包；旧包明确作废" },
-    { "id": "PACK-5", "dimension": "pack", "stage": "name", "severity": "block", "text": "带密钥的配置 URL 当密码；泄露即作废" },
+    { "id": "PACK-4", "dimension": "pack", "stage": "reuse", "severity": "block", "deprecated": true, "supersededBy": "LAUNCH-5", "text": "版本号能区分上一包；旧包明确作废" },
+    { "id": "PACK-5", "dimension": "pack", "stage": "name", "severity": "block", "deprecated": true, "supersededBy": "LAUNCH-5", "text": "带密钥的配置 URL 当密码；泄露即作废" },
     { "id": "PACK-6", "dimension": "pack", "stage": "lock", "severity": "warn", "text": "打包后有一条 import(包名) 探针" },
 
     { "id": "LAND-1", "dimension": "land", "stage": "name", "severity": "block", "text": "本轮洞察有稳定门禁 id，不引用段落标题" },
@@ -50,17 +53,19 @@
     { "id": "LAND-4", "dimension": "land", "stage": "see", "severity": "warn", "text": "例子不含密钥、真实账号、库存域名、内网地址" },
     { "id": "LAND-5", "dimension": "land", "stage": "lock", "severity": "block", "text": "npm run verify 绿" },
 
-    { "id": "LOOP-1", "dimension": "loop", "stage": "see", "severity": "block", "text": "会话先要原文或计时，未定性就动手视为失败" },
-    { "id": "LOOP-2", "dimension": "loop", "stage": "name", "severity": "block", "text": "定律用现在时 MUST / MUST NOT 写出" },
-    { "id": "LOOP-3", "dimension": "loop", "stage": "lock", "severity": "block", "text": "第一笔是红灯探针或未登记 id 的自检失败" },
-    { "id": "LOOP-4", "dimension": "loop", "stage": "lock", "severity": "block", "text": "实现是最小变绿，无顺手重构" },
-    { "id": "LOOP-5", "dimension": "loop", "stage": "reuse", "severity": "block", "text": "收尾走 LAND，不把「说完了」当完成" },
+    { "id": "LOOP-1", "dimension": "loop", "stage": "see", "severity": "block", "deprecated": true, "supersededBy": "PROBE-1", "text": "会话先要原文或计时，未定性就动手视为失败" },
+    { "id": "LOOP-2", "dimension": "loop", "stage": "name", "severity": "block", "deprecated": true, "supersededBy": "PROBE-1", "text": "定律用现在时 MUST / MUST NOT 写出" },
+    { "id": "LOOP-3", "dimension": "loop", "stage": "lock", "severity": "block", "deprecated": true, "supersededBy": "PROBE-3", "text": "第一笔是红灯探针或未登记 id 的自检失败" },
+    { "id": "LOOP-4", "dimension": "loop", "stage": "lock", "severity": "block", "deprecated": true, "supersededBy": "PROBE-3", "text": "实现是最小变绿，无顺手重构" },
+    { "id": "LOOP-5", "dimension": "loop", "stage": "reuse", "severity": "block", "deprecated": true, "supersededBy": "LAND-2", "text": "收尾走 LAND，不把「说完了」当完成" },
+    { "id": "LOOP-6", "dimension": "loop", "stage": "reuse", "severity": "block", "text": "本会话只提取定律；七步执行归 build-standard / PROBE，收尾必须有新 id 或新例子" },
 
-    { "id": "SELF-1", "dimension": "self", "stage": "see", "severity": "block", "text": "权威表存在，每类问题只链一份" },
-    { "id": "SELF-2", "dimension": "self", "stage": "see", "severity": "block", "text": "STATUS 为生成物，version 与 catalog 一致" },
+    { "id": "SELF-1", "dimension": "self", "stage": "see", "severity": "block", "deprecated": true, "supersededBy": "DOC-1", "text": "权威表存在，每类问题只链一份" },
+    { "id": "SELF-2", "dimension": "self", "stage": "see", "severity": "block", "deprecated": true, "supersededBy": "DOC-2", "text": "STATUS 为生成物，version 与 catalog 一致" },
     { "id": "SELF-3", "dimension": "self", "stage": "lock", "severity": "block", "text": "gates.json 与纬度清单 id 双向一致" },
     { "id": "SELF-4", "dimension": "self", "stage": "reuse", "severity": "block", "text": "相对链接可解析；无疑似密钥" },
-    { "id": "SELF-5", "dimension": "self", "stage": "name", "severity": "block", "text": "文件名与标题不声称「当前唯一版本」" },
-    { "id": "SELF-6", "dimension": "self", "stage": "see", "severity": "warn", "text": "与 ship-standard / build-standard 的边界写在 README" }
+    { "id": "SELF-5", "dimension": "self", "stage": "name", "severity": "block", "deprecated": true, "supersededBy": "DOC-5", "text": "文件名与标题不声称「当前唯一版本」" },
+    { "id": "SELF-6", "dimension": "self", "stage": "see", "severity": "block", "text": "README 写明与 ship-standard / build-standard 的边界" },
+    { "id": "SELF-7", "dimension": "self", "stage": "lock", "severity": "block", "text": "非废止的 block 门禁必须被例子引用，或显式标 evidence none" }
   ]
 }

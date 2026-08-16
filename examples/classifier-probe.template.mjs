@@ -1,8 +1,9 @@
 /**
- * Red probe for TAX-1 / TAX-3.
- * First commit: assertions fail.
+ * Red probe template for TAX-3 / TAX-6.
+ * Copy this file. First commit: assertions fail.
  * Second commit: minimum classifier turns them green.
  * Replace the sample strings with real page / API text.
+ * This template is not a passing test and is skipped by npm run verify.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';

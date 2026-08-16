@@ -1,6 +1,6 @@
 # 纬度：洞察必须落盘
 
-配套：[loop](./loop.md) · [self](./self.md)
+配套：[loop](./loop.md) · [self](./self.md) · 例子 [insight-landed.md](../examples/insight-landed.md)
 
 ---
 

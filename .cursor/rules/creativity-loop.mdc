@@ -11,7 +11,9 @@ This is a standard repo in the ship-standard shape.
 - Cite gate ids (`MOAT-1`, `PACK-3`). Do not cite heading text.
 - No timing → do not optimize "slow" (`MEASURE-5`).
 - If the operator names an advantage, lock it (`MOAT-1`). Do not "fix" it.
-- One failure kind → one action (`TAX-2`).
+- Humanize stays on; key interval is not 0 and not uniform (`MOAT-6`, `MOAT-7`).
+- First creative output is a classifier table and a failing test (`TAX-6`, `TAX-3`).
 - Chat insights must land in `dimensions/` or `examples/` in the same change (`LAND-2`).
+- This session extracts laws; seven-step execution lives in build-standard (`LOOP-6`).
 - First commit on a new dimension makes `npm run verify` red, then green.
 - Launch / STOP / rollback questions go to ship-standard, not here.

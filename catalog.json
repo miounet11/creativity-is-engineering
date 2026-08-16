@@ -1,6 +1,6 @@
 {
   "name": "creativity-is-engineering",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Creativity dimensions with stable gate ids. An insight that only lives in chat is not creativity.",
   "gates": "gates.json",
   "related": {
@@ -13,7 +13,7 @@
       "title": "不删优势",
       "path": "dimensions/moat.md",
       "status": "stable",
-      "summary": "If the operator names a behavior as an advantage, lock it. Do not optimize the moat."
+      "summary": "If the operator names a behavior as an advantage, lock it. Humanize stays on; delay is not 0 and not uniform."
     },
     {
       "id": "measure",
@@ -26,22 +26,22 @@
       "id": "taxonomy",
       "title": "一种失败一种动作",
       "path": "dimensions/taxonomy.md",
-      "status": "stable",
-      "summary": "The first AI output is a classifier over real text, not a faster fill()."
+      "status": "draft",
+      "summary": "The first creative output is a classifier table and a failing test, not a faster fill()."
     },
     {
       "id": "integrate",
       "title": "三张皮一层肉",
       "path": "dimensions/integrate.md",
       "status": "stable",
-      "summary": "HTTP, IPC, and tests converge on one service. A long-run shell is not a fork."
+      "summary": "HTTP, IPC, and tests converge on one service. Identity, network, and behavior write as one bundle."
     },
     {
       "id": "pack",
       "title": "包装边界",
       "path": "dimensions/pack.md",
       "status": "stable",
-      "summary": "Secrets stay out of the installer. Config is URL, paste, and a third path. ESM outside asar cannot see modules inside asar."
+      "summary": "Fallback URLs live in the manifest. ESM outside asar cannot see modules inside asar."
     },
     {
       "id": "land",
@@ -52,17 +52,23 @@
     },
     {
       "id": "loop",
-      "title": "创造会话七步",
+      "title": "创造会话收尾",
       "path": "dimensions/loop.md",
-      "status": "stable",
-      "summary": "Diagnose, name the law, plan, red probe, minimum green, verify, land."
+      "status": "draft",
+      "summary": "This session extracts laws. Seven-step execution lives in build-standard. Landing needs a new id or example."
     },
     {
       "id": "self",
       "title": "标准自检",
       "path": "dimensions/self.md",
       "status": "stable",
-      "summary": "This repo passes its own gates. STATUS is generated. Gate ids are two-way consistent."
+      "summary": "Gate ids are two-way consistent. Active block gates must be cited in examples."
     }
+  ],
+  "planned": [
+    { "id": "coherence", "summary": "Later laws do not contradict earlier ones in the same product." },
+    { "id": "diversity", "summary": "A new law is not a restatement of an existing id." },
+    { "id": "earned", "summary": "The law came from a real battlefield, not a thought experiment." },
+    { "id": "provenance", "summary": "The example points at a session or commit, not an anonymous proverb." }
   ]
 }

@@ -1,6 +1,6 @@
 # 纬度：三张皮一层肉
 
-配套：[pack](./pack.md)
+配套：[pack](./pack.md) · 例子 [three-surfaces.md](../examples/three-surfaces.md)
 
 ---
 
