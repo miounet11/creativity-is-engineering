@@ -2,6 +2,15 @@
 
 标准本身也要能被安全采用：门禁 id 一旦公布就不改含义，只新增或标 deprecated。
 
+## 0.3.0
+
+把评测尺和审查循环接到家族地图上，并落下计划中的四个纬度（均为 draft / warn）。
+
+- 新增 draft 纬度 `coherence` `diversity` `earned` `provenance`，门禁 `COH-1` `COH-2` `DIV-1` `EARN-1` `PROV-1`（warn，两轮绿后再考虑升 block）。
+- `catalog.related` 与 README 补上 [ability-harness](https://github.com/miounet11/ability-harness) 与 [review-harness](https://github.com/miounet11/review-harness)。
+- 例子 [family-harness.md](./examples/family-harness.md)：战场是 modeltest 协议与 defending-code 审查循环，落到我们自己的两个 harness。
+- 没有为审查循环新开 ship 门禁（`COH-2` / `DIV-1`）。
+
 ## 0.2.0
 
 切掉与 ship-standard / build-standard 重叠的现行清单，把本仓锁回「创造有没有落成定律」。

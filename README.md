@@ -16,28 +16,30 @@ AI 创造力 = **真实战场 × 可测 × 有规格 × 不删优势**。聊天�
 | [land](./dimensions/land.md) | stable | 洞察必须落盘 | `LAND-1..5` |
 | [loop](./dimensions/loop.md) | draft | 本会话只提取定律 | `LOOP-6` |
 | [self](./dimensions/self.md) | stable | 标准自检 | `SELF-3` `SELF-4` `SELF-6` `SELF-7` |
+| [coherence](./dimensions/coherence.md) | draft | 后法不打前法 | `COH-1` `COH-2` |
+| [diversity](./dimensions/diversity.md) | draft | 新法不是换皮 | `DIV-1` |
+| [earned](./dimensions/earned.md) | draft | 来自战场 | `EARN-1` |
+| [provenance](./dimensions/provenance.md) | draft | 例子能回溯 | `PROV-1` |
 
 - 机器可读门禁：[gates.json](./gates.json)
 - 生成的汇总：[STATUS.md](./STATUS.md)
 - 版本与兼容承诺：[CHANGELOG.md](./CHANGELOG.md)
 
-### 计划中的纬度
-
-尚未开文件，也不占门禁 id：`coherence`（后法不打前法）、`diversity`（新法不是旧 id 换皮）、`earned`（来自战场不是空想）、`provenance`（例子能指回会话或提交）。
-
 ---
 
-## 边界：本仓 vs 另外两仓
+## 边界：一问一仓
 
-三仓不重叠。同一件事只有一个权威。
+同一件事只有一个权威。
 
 | 问题 | 权威 |
 |------|------|
 | **能不能上线**：灰度、回滚、STOP、主路径 | [ship-standard](https://github.com/miounet11/ship-standard) |
 | **怎么创建**：七步执行、人与 Agent 分工、最小变绿 | [build-standard](https://github.com/miounet11/build-standard) |
 | **创造有没有落成定律**：不删优势、分段、分类第一产出、包装边界 | **本仓** `dimensions/` |
+| 这个模型在六面上能不能修交接本 | [ability-harness](https://github.com/miounet11/ability-harness) |
+| 这轮迭代 / 升级 / 修 bug 有没有漏审查 | [review-harness](https://github.com/miounet11/review-harness) |
 
-本仓不写「这版能不能发给用户」。ship-standard 不写「这段慢是不是护城河」。豁免、执行节奏、红绿提交顺序看 build-standard，不要在本仓另写一份。
+本仓不写「这版能不能发给用户」。ship-standard 不写「这段慢是不是护城河」。豁免、执行节奏、红绿提交顺序看 build-standard。评测协议对齐 [xiaobright/modeltest](https://github.com/xiaobright/modeltest)，审查循环对齐 [defending-code-reference-harness](https://github.com/anthropics/defending-code-reference-harness)；实现都在对应 harness，不进本仓现行清单。
 
 ---
 

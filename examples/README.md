@@ -20,3 +20,4 @@
 | [three-surfaces.md](./three-surfaces.md) | integrate | HTTP / IPC / 测试 / 长跑壳共用一层 |
 | [insight-landed.md](./insight-landed.md) | land + loop | 洞察落成 id、例子、changelog、verify |
 | [standard-self.md](./standard-self.md) | self | 标准自己过自己的门禁 |
+| [family-harness.md](./family-harness.md) | coherence + diversity + earned + provenance | 评测尺与审查循环落成家族 |

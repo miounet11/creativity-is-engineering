@@ -1,11 +1,13 @@
 {
   "name": "creativity-is-engineering",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Creativity dimensions with stable gate ids. An insight that only lives in chat is not creativity.",
   "gates": "gates.json",
   "related": {
     "ship-standard": "https://github.com/miounet11/ship-standard",
-    "build-standard": "https://github.com/miounet11/build-standard"
+    "build-standard": "https://github.com/miounet11/build-standard",
+    "ability-harness": "https://github.com/miounet11/ability-harness",
+    "review-harness": "https://github.com/miounet11/review-harness"
   },
   "dimensions": [
     {
@@ -63,12 +65,34 @@
       "path": "dimensions/self.md",
       "status": "stable",
       "summary": "Gate ids are two-way consistent. Active block gates must be cited in examples."
+    },
+    {
+      "id": "coherence",
+      "title": "后法不打前法",
+      "path": "dimensions/coherence.md",
+      "status": "draft",
+      "summary": "A later law does not contradict an earlier active id in the same product."
+    },
+    {
+      "id": "diversity",
+      "title": "新法不是换皮",
+      "path": "dimensions/diversity.md",
+      "status": "draft",
+      "summary": "A new id is not a restatement of an existing one."
+    },
+    {
+      "id": "earned",
+      "title": "来自战场",
+      "path": "dimensions/earned.md",
+      "status": "draft",
+      "summary": "The law came from a named battlefield, not a thought experiment."
+    },
+    {
+      "id": "provenance",
+      "title": "例子能回溯",
+      "path": "dimensions/provenance.md",
+      "status": "draft",
+      "summary": "The example points at a session, commit, or public repo, not an anonymous proverb."
     }
-  ],
-  "planned": [
-    { "id": "coherence", "summary": "Later laws do not contradict earlier ones in the same product." },
-    { "id": "diversity", "summary": "A new law is not a restatement of an existing id." },
-    { "id": "earned", "summary": "The law came from a real battlefield, not a thought experiment." },
-    { "id": "provenance", "summary": "The example points at a session or commit, not an anonymous proverb." }
   ]
 }

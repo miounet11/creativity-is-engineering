@@ -1,7 +1,7 @@
 {
   "$comment": "Gate IDs are the stable contract. Never reuse an id or change its meaning. Tightening = new id; old id gets deprecated + supersededBy.",
   "standard": "creativity-is-engineering",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "severities": {
     "block": "Failing this means the insight is not a law yet, or an advantage was deleted.",
     "warn": "Failing this posts a note. Promote to block after two green sessions."
@@ -66,6 +66,15 @@
     { "id": "SELF-4", "dimension": "self", "stage": "reuse", "severity": "block", "text": "相对链接可解析；无疑似密钥" },
     { "id": "SELF-5", "dimension": "self", "stage": "name", "severity": "block", "deprecated": true, "supersededBy": "DOC-5", "text": "文件名与标题不声称「当前唯一版本」" },
     { "id": "SELF-6", "dimension": "self", "stage": "see", "severity": "block", "text": "README 写明与 ship-standard / build-standard 的边界" },
-    { "id": "SELF-7", "dimension": "self", "stage": "lock", "severity": "block", "text": "非废止的 block 门禁必须被例子引用，或显式标 evidence none" }
+    { "id": "SELF-7", "dimension": "self", "stage": "lock", "severity": "block", "text": "非废止的 block 门禁必须被例子引用，或显式标 evidence none" },
+
+    { "id": "COH-1", "dimension": "coherence", "stage": "name", "severity": "warn", "text": "后写的定律不否定同一产品里仍有效的前法" },
+    { "id": "COH-2", "dimension": "coherence", "stage": "see", "severity": "warn", "text": "家族一问一仓表仍是互斥权威，未把审查循环写成第二份 launch" },
+
+    { "id": "DIV-1", "dimension": "diversity", "stage": "name", "severity": "warn", "text": "新 id 不是已有 id 换皮；重叠则废止并指向权威仓" },
+
+    { "id": "EARN-1", "dimension": "earned", "stage": "see", "severity": "warn", "text": "定律来自具名战场（仓库、事故或会话），不是空想推演" },
+
+    { "id": "PROV-1", "dimension": "provenance", "stage": "reuse", "severity": "warn", "text": "例子能指回提交、会话或公开仓库 URL，不是匿名谚语" }
   ]
 }

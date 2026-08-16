@@ -118,6 +118,12 @@ const readme = await readText('README.md');
 if (!/ship-standard/.test(readme) || !/build-standard/.test(readme)) {
   fail('SELF-6', 'README.md must name ship-standard and build-standard');
 }
+if (!catalog.related?.['ability-harness'] || !catalog.related?.['review-harness']) {
+  fail('RELATED-MISSING', 'catalog.related must name ability-harness and review-harness');
+}
+if (!/ability-harness/.test(readme) || !/review-harness/.test(readme)) {
+  fail('RELATED-MISSING', 'README.md must name ability-harness and review-harness');
+}
 if (!/战场/.test(readme) || !/不删优势/.test(readme)) {
   fail('SELF-6', 'README.md must state the four-factor thesis (战场 + 不删优势)');
 }

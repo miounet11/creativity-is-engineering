@@ -64,6 +64,8 @@ ${planned ? `## Planned dimensions\n\n${planned}\n` : ''}
 - 引用门禁请用 id（例如 \`MOAT-1\`），不要引用行号或段落标题。
 - 上线判定去 [ship-standard](https://github.com/miounet11/ship-standard)。
 - 怎么写代码去 [build-standard](https://github.com/miounet11/build-standard)。
+- 六面修交接本去 [ability-harness](https://github.com/miounet11/ability-harness)。
+- 迭代 / 升级 / 修 bug 审查去 [review-harness](https://github.com/miounet11/review-harness)。
 `;
 
 await writeFile(join(ROOT, 'STATUS.md'), out);

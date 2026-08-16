@@ -15,6 +15,7 @@ This repo is a **standard**, not an application. It follows the same machinery a
 - Launch / rollback / STOP checklists (those live in ship-standard)
 - How-to-write-code practices and the seven-step loop (those live in build-standard)
 - Launch / resilience / probe / doc-system checklists copied from ship-standard
+- Six-surface eval seeds (ability-harness) and the iteration review loop (review-harness)
 - Step-by-step instructions for operating a third-party signup
 
 ## How to add a dimension
