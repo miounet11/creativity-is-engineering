@@ -33,6 +33,7 @@ AI 创造力 = **真实战场 × 可测 × 有规格 × 不删优势**。聊天�
 
 | 问题 | 权威 |
 |------|------|
+| 新产品从短需求怎么开工、方案怎么被系统制定成合同 | [begin](https://github.com/miounet11/begin) |
 | **能不能上线**：灰度、回滚、STOP、主路径 | [ship-standard](https://github.com/miounet11/ship-standard) |
 | **怎么创建**：七步执行、人与 Agent 分工、最小变绿 | [build-standard](https://github.com/miounet11/build-standard) |
 | **创造有没有落成定律**：不删优势、分段、分类第一产出、包装边界 | **本仓** `dimensions/` |
