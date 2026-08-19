@@ -1,5 +1,10 @@
 # Changelog
 
+
+## Unreleased
+
+- 权威表增加 [begin](https://github.com/miounet11/begin) 指针：新产品开工与方案制定不再由本仓回答。兼容变更，无新门禁 id。
+
 标准本身也要能被安全采用：门禁 id 一旦公布就不改含义，只新增或标 deprecated。
 
 ## 0.3.0
